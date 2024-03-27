@@ -1,16 +1,19 @@
-import { APIProvider, Map } from '@vis.gl/react-google-maps'
-import { CurrentLocationControl } from './components/current-location-control'
+import { APIProvider } from '@vis.gl/react-google-maps'
+import { MyMap } from './components/map'
+import { useEffect } from 'react'
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from './config/firebase'
+import { initializeUser } from './context/lib'
+
 export const App = () => {
+	useEffect(() => {
+		const unsubscribe = onAuthStateChanged(auth, initializeUser)
+		return unsubscribe
+	}, [])
+
 	return (
 		<APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
-			<Map
-				style={{ height: '100dvh' }}
-				defaultCenter={{ lat: 22.54992, lng: 0 }}
-				defaultZoom={3}
-				gestureHandling={'greedy'}
-			>
-				<CurrentLocationControl />
-			</Map>
+			<MyMap />
 		</APIProvider>
 	)
 }
