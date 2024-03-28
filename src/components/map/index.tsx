@@ -1,4 +1,4 @@
-import { Map, Marker } from '@vis.gl/react-google-maps'
+import { Map, Marker, Pin } from '@vis.gl/react-google-maps'
 import { CurrentLocationButton } from '../current-location-button'
 import { LoginButton } from '../../features/auth/ui/login-button'
 import { PlacesSearch } from '../../features/search/ui'
@@ -24,7 +24,10 @@ export const MyMap = () => {
 					key={place.place_id}
 					position={place.geometry?.location}
 					title={place.formatted_address}
-					icon={place.icon}
+					icon={{
+						scaledSize: new google.maps.Size(40, 40),
+						url: place.icon || '',
+					}}
 				/>
 			))}
 		</Map>
