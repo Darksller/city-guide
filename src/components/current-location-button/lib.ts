@@ -1,3 +1,5 @@
+import { useMapStore } from '../../context/map'
+
 export const getCurrentLocation = async (
 	map: google.maps.Map | null
 ): Promise<boolean> => {
@@ -9,6 +11,7 @@ export const getCurrentLocation = async (
 					lat: position.coords.latitude,
 					lng: position.coords.longitude,
 				}
+				useMapStore.getState().setMyLocation(pos)
 				map?.setCenter(pos)
 				new google.maps.Marker({
 					map,

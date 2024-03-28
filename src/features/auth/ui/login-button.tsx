@@ -16,7 +16,6 @@ export const LoginButton = () => {
 	const handleClose = () => {
 		setOpen(false)
 	}
-	console.log(isLoggedIn)
 	return (
 		<MapControl position={google.maps.ControlPosition.TOP_RIGHT}>
 			{!isLoggedIn ? (

@@ -11,6 +11,7 @@ export const StyledCurrentLocationButton = styled.button`
 	margin-bottom: 10px;
 	background-color: white;
 	border-style: none;
+	border-radius: 20px;
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 	:hover {
 		font-size: 30px;

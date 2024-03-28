@@ -9,7 +9,8 @@ export const StyledAuthButton = styled.button`
 	padding-left: 15px;
 	padding-right: 15px;
 	font-weight: bold;
-	height: 35px;
+	border-radius: 20px;
+	height: 40px;
 	margin-top: 10px;
 	margin-right: 10px;
 	background-color: white;
