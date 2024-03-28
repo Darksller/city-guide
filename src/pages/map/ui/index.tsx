@@ -58,7 +58,7 @@ export const MyMap = () => {
 							<img
 								src={selectedPlace.photos[0].getUrl()}
 								alt={selectedPlace.name}
-								style={{ maxWidth: '400px' }}
+								style={{ maxWidth: '260px' }}
 							/>
 						)}
 						<div>{selectedPlace.vicinity}</div>
