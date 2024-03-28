@@ -2,7 +2,7 @@ import { Button, Stack, TextField } from '@mui/material'
 import { useForm } from 'react-hook-form'
 import { FormValues } from '../types'
 import { doSignInWithEmailAndPassword } from '../lib'
-import { useAuth } from '../../../context/auth'
+import { useAuth } from '../../../shared/context/auth'
 import { useState } from 'react'
 
 type SingInFormProps = {

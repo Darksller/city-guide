@@ -1,7 +1,7 @@
 import { MapControl, useMap } from '@vis.gl/react-google-maps'
 import { StyledCurrentLocationButton } from './styles'
 import { useEffect, useState } from 'react'
-import { getCurrentLocation } from './lib'
+import { getCurrentLocation } from '../lib'
 import { NearMe, NearMeDisabled } from '@mui/icons-material'
 
 export const CurrentLocationButton = () => {

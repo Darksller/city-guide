@@ -7,7 +7,7 @@ import {
 import SearchIcon from '@mui/icons-material/Search'
 import { useState } from 'react'
 import { valueTextFormat } from '../lib'
-import { useMapStore } from '../../../context/map'
+import { useMapStore } from '../../../shared/context/map'
 import { usePlacesService } from '../model/usePlacesService'
 
 type PlacesSearchProps = {
@@ -42,7 +42,7 @@ export const PlacesSearch = ({ setPlaces }: PlacesSearchProps) => {
 				(resolve, reject) => {
 					placesService?.nearbySearch(request, (results, status) => {
 						if (status === google.maps.places.PlacesServiceStatus.OK) {
-							resolve(results)
+							resolve(results!)
 						} else {
 							reject(new Error(`Places service failed: ${status}`))
 						}

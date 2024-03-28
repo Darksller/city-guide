@@ -6,7 +6,4 @@ export const Global = createGlobalStyle`
   padding: 0;
   box-sizing: border-box
 }
-div.gm-style div div div div div img {
-  width: 15px;
-}
 `

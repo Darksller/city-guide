@@ -4,7 +4,7 @@ import Dialog from '@mui/material/Dialog'
 import DialogContent from '@mui/material/DialogContent'
 import { MapControl } from '@vis.gl/react-google-maps'
 import { AuthTabs } from './tabs'
-import { useAuth } from '../../../context/auth'
+import { useAuth } from '../../../shared/context/auth'
 import { doSignOut } from '../lib'
 
 export const LoginButton = () => {

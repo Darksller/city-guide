@@ -1,4 +1,4 @@
-import { useMapStore } from '../../context/map'
+import { useMapStore } from '../../shared/context/map'
 
 export const getCurrentLocation = async (
 	map: google.maps.Map | null

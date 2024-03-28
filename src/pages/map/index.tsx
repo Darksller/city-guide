@@ -1,5 +1,5 @@
-import { Map, Marker, Pin } from '@vis.gl/react-google-maps'
-import { CurrentLocationButton } from '../current-location-button'
+import { Map, Marker } from '@vis.gl/react-google-maps'
+import { CurrentLocationButton } from '../../features/current-location/ui'
 import { LoginButton } from '../../features/auth/ui/login-button'
 import { PlacesSearch } from '../../features/search/ui'
 import { useState } from 'react'
