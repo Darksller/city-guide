@@ -1,14 +1,12 @@
 import styled from 'styled-components'
 
-export const StyledCurrentLocationButton = styled.button`
+export const StyledIconButton = styled.button`
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 40px;
 	height: 40px;
-	margin-right: 10px;
-	margin-bottom: 10px;
 	background-color: white;
 	border-style: none;
 	border-radius: 20px;

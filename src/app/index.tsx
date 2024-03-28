@@ -1,5 +1,5 @@
 import { APIProvider } from '@vis.gl/react-google-maps'
-import { MyMap } from '../pages/map'
+import { MyMap } from '../pages/map/ui'
 import { useEffect } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../shared/config/firebase'

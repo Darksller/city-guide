@@ -3,7 +3,6 @@ import { User } from 'firebase/auth'
 
 export const initializeUser = (user: User | null) => {
 	const authStore = useAuth.getState()
-	console.log(user)
 	if (user) {
 		authStore.setUser({ ...user })
 		authStore.setIsLoggedIn(true)

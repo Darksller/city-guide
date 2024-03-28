@@ -1,5 +1,5 @@
 import { MapControl, useMap } from '@vis.gl/react-google-maps'
-import { StyledCurrentLocationButton } from './styles'
+import { StyledIconButton } from '../../../shared/ui/iconButton'
 import { useEffect, useState } from 'react'
 import { getCurrentLocation } from '../lib'
 import { NearMe, NearMeDisabled } from '@mui/icons-material'
@@ -17,9 +17,12 @@ export const CurrentLocationButton = () => {
 
 	return (
 		<MapControl position={google.maps.ControlPosition.RIGHT_BOTTOM}>
-			<StyledCurrentLocationButton onClick={onGetCurrentLocation}>
+			<StyledIconButton
+				onClick={onGetCurrentLocation}
+				style={{ marginRight: '10px' }}
+			>
 				{isAllowed ? <NearMe /> : <NearMeDisabled />}
-			</StyledCurrentLocationButton>
+			</StyledIconButton>
 		</MapControl>
 	)
 }
